@@ -1,15 +1,19 @@
 export default class App {
 
     sumatoriaSerieUno(numero) {
+        let i
+        let suma 
+        suma = 0
 
-        for(numero = numero;numero < 10;numero++) {
-            
+        for(i = 1; i <= numero;i++) {
+            suma = suma + i
         }
 
-        return numero
+        return suma
     }
+    
 }
 
 let app = new App();
 
-console.log(app.sumatoriaSerieUno(2))
+console.log(app.sumatoriaSerieUno(6))
