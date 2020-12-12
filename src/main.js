@@ -33,9 +33,32 @@ export default class App {
         return suma
     }
 
+    esPrimo(numero) {
+
+        let i = 1
+        let divisibles = 0
+
+        do {
+            
+            if (numero % i == 0) {
+                divisibles++
+            }
+            
+            i++
+        
+        } while (i <= numero)
+
+        if(divisibles == 2) {
+            return true
+        } else
+            return false
+
+    }
+
 }
 
 let app = new App();
 
 console.log(app.sumatoriaSerieUno(6))
 console.log(app.sumatoriaSerieDos(6))
+console.log(app.esPrimo(17))
